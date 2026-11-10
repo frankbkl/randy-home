@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- 新增：基础 SEO 与社交媒体抓取标签 -->
+<meta name="description" content="IT 运维工程师的个人主页与技术档案，记录技术实践、自动化工具与生活思考。">
+<title>个人主页 · Demo</title>
+<style>
+:root{--bg:#fff;--fg:#242424;--muted:#777;--line:#e9e9e9;--link:#315f9b;--soft:#f7f7f5;--max:760px}
+/* 优化：增加 scroll-padding-top 避免锚点跳转时标题贴边 */
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:40px;}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline} .wrap{max-width:var(--max);margin:auto;padding:28px 26px 70px}
+nav{display:flex;align-items:center;gap:23px;font-size:14px;margin-bottom:76px;color:var(--muted)}nav a{color:var(--muted)}nav .brand{font-weight:650;color:var(--fg);margin-right:auto}
+.hero{display:flex;gap:24px;align-items:center;margin-bottom:28px}
+.avatar{width:88px;height:88px;border-radius:50%;background:linear-gradient(145deg,#d9e3ed,#9fb5c9);display:grid;place-items:center;color:#fff;font-size:29px;font-weight:600;flex:none}
+.eyebrow{font-size:13px;color:var(--muted);margin:0 0 2px}h1{font-size:34px;line-height:1.25;letter-spacing:-1px;margin:0 0 7px;font-weight:700}.subtitle{margin:0;color:#555;font-size:16px}.intro{margin:20px 0 28px;color:#444}.links{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 48px}.pill{font-size:13px;border:1px solid var(--line);border-radius:6px;padding:5px 10px;color:#555;background:#fff}.section{margin:0 0 45px}.section h2{font-size:18px;margin:0 0 17px;letter-spacing:-.2px}
+.workgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.work{padding:14px 16px;border:1px solid var(--line);border-radius:8px}.work b{display:block;font-size:15px;font-weight:600}.work span{font-size:13px;color:var(--muted)}
+/* 新增：为 Product 板块设计一种略有区分的卡片样式 */
+.product-card{padding:16px;border:1px solid var(--line);border-radius:8px;background:var(--soft);display:flex;flex-direction:column;gap:6px}
+.product-card b{font-size:16px;font-weight:600}.product-card p{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+.about p{margin:0 0 13px;color:#454545}.timeline{border-left:1px solid var(--line);padding-left:18px;margin-left:5px}.job{position:relative;margin:0 0 18px}.job:before{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#aaa;left:-22px;top:10px}.job b{font-weight:600}.job small{display:block;color:var(--muted);font-size:13px}.post{display:grid;grid-template-columns:1fr auto;gap:18px;padding:11px 0;border-bottom:1px solid var(--line);align-items:baseline}.post a{color:var(--fg)}.post time{color:#999;font-size:13px;white-space:nowrap}.post .tag{font-size:11px;color:#888;margin-left:8px}.more{display:inline-block;margin-top:17px;font-size:14px}.footer{border-top:1px solid var(--line);padding-top:18px;color:#999;font-size:13px;margin-top:54px}.toolbar{position:fixed;right:20px;bottom:20px}.toolbar button{border:1px solid var(--line);background:#fff;border-radius:30px;padding:9px 13px;cursor:pointer;color:#555;box-shadow:0 3px 14px #0000000b}
+@media(max-width:600px){.wrap{padding:22px 20px 50px}nav{margin-bottom:52px;gap:12px;flex-wrap:wrap}.hero{gap:16px}.avatar{width:70px;height:70px}h1{font-size:29px}.workgrid{grid-template-columns:1fr}.post{gap:8px}.post time{font-size:12px}}
+body.dark{--bg:#171717;--fg:#eee;--muted:#aaa;--line:#333;--link:#9bbce8;--soft:#222}body.dark .subtitle,body.dark .intro,body.dark .about p{color:#c7c7c7}body.dark .pill,body.dark .toolbar button{background:#222;color:#ccc;border-color:#444}body.dark .post a{color:#eee}body.dark .work, body.dark .product-card{border-color:#333}
+</style>
+</head>
+<body><main class="wrap">
+<!-- 优化：在导航栏增加了 Product 的入口，调整了顺序 -->
+<nav>
+    <a class="brand" href="#top">个人主页</a>
+    <a href="#projects">项目</a>
+    <a href="#product">作品</a>
+    <a href="#about">关于</a>
+    <a href="#writing">文章</a>
+    <a href="#contact">联系</a>
+</nav>
+
+<section id="top">
+<div class="hero"><div class="avatar">你</div><div><p class="eyebrow">个人网站 · 独立博客</p><h1>你好，我是一个持续学习的人。</h1><p class="subtitle">IT 运维 / 技术实践 / 生活记录</p></div></div>
+<p class="intro">记录工作中遇到的技术问题、解决问题的过程，以及关于学习、职业和生活的思考。这里不追热点，主要留下真实经验。</p>
+<div class="links"><a class="pill" href="#product">个人作品 ↗</a><a class="pill" href="#writing">技术笔记 ↗</a><a class="pill" href="#contact">联系我 ↗</a></div>
+</section>
+
+<section class="section" id="projects">
+    <h2>Projects / 正在做的事</h2>
+    <div class="workgrid">
+        <div class="work"><b>IT 运维知识库</b><span>故障记录 · 排查流程 · 经验沉淀</span></div>
+        <div class="work"><b>Network Lab</b><span>企业网络 · VLAN · VXLAN 实验</span></div>
+    </div>
+</section>
+
+<!-- 新增：Product 板块，放在 About 之前 -->
+<section class="section" id="product">
+    <h2>Products / 个人作品</h2>
+    <div class="workgrid">
+        <div class="product-card">
+            <b>古典文学 AI 视觉化</b>
+            <p>基于 Midjourney/Stable Diffusion 工作流，重绘《西游记》、《红楼梦》等名著经典桥段，输出系列连载漫画。</p>
+        </div>
+        <div class="product-card">
+            <b>自托管运维工具箱</b>
+            <p>基于 Python (Playwright / Pandas) 与 n8n 部署的自动化任务流，解决日常网页抓取与巡检需求。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <h2>About / 关于我</h2>
+    <p>我从事 IT 技术支持与运维工作，关注企业网络、终端管理、基础设施和自动化工具。</p>
+    <p>相比罗列技术名词，我更愿意记录一个问题是怎样发生的、如何定位、尝试过哪些方法，以及最后如何解决。</p>
+    <p>这个网站是个人知识与经历的长期档案，也希望它能成为与同行交流的入口。</p>
+</section>
+
+<section class="section">
+    <h2>Experience / 经历</h2>
+    <div class="timeline">
+        <div class="job"><b>IT 运维与技术支持</b><small>企业 IT · 现在</small>负责终端、网络、账号权限、设备资产及日常故障处理。</div>
+        <div class="job"><b>企业信息化与系统支持</b><small>制造业 · 过往经历</small>接触 ERP、OA、数据库、业务系统及跨部门需求支持。</div>
+        <div class="job"><b>持续学习</b><small>长期进行中</small>网络基础设施、脚本自动化、英语沟通与个人产品实践。</div>
+    </div>
+</section>
+
+<section class="section" id="writing">
+    <h2>Writing / 最近文章</h2>
+    <div class="post"><a href="#article1">一次网络故障的完整排查记录 <span class="tag">网络</span></a><time>2026.11.08</time></div>
+    <div class="post"><a href="#article2">从桌面运维到基础设施：我的能力升级路线 <span class="tag">职业</span></a><time>2026.10.26</time></div>
+    <div class="post"><a href="#article3">用实验环境理解 VLAN 与 VXLAN <span class="tag">学习</span></a><time>2026.10.14</time></div>
+    <div class="post"><a href="#article4">我为什么开始认真练习英语口语 <span class="tag">生活</span></a><time>2026.10.02</time></div>
+    <div class="post"><a href="#article5">把故障处理过程变成可复用的知识 <span class="tag">方法</span></a><time>2026.09.18</time></div>
+    <a class="more" href="#writing">查看全部文章 →</a>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact / 联系</h2>
+    <p>欢迎交流技术问题、工具实践或合作想法。</p>
+    <a href="mailto:hello@example.com">hello@example.com</a> · <a href="#top">返回顶部 ↑</a>
+</section>
+
+<footer class="footer">© 2026 · Personal Notes. Built for writing, learning and making things.</footer>
+</main>
+
+<div class="toolbar"><button id="theme">切换深色模式 ◐</button></div>
+
+<!-- 优化：利用 localStorage 实现深色模式状态持久化 -->
+<script>
+    const themeBtn = document.getElementById('theme');
+    const currentTheme = localStorage.getItem('theme');
+    
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark');
+    }
+    
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        if (document.body.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+</body>
+</html>
